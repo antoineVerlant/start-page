@@ -2,18 +2,10 @@ var config =
 {
     "sites":
     [
-        { "url": "https://boards.4chan.org/jp/",                                    "text": "/jp/" },
-        { "url": "https://boards.4chan.org/a/",                                     "text": "/a/"  },
-        { "url": "https://boards.4chan.org/g/",                                     "text": "/g/"  },
-        { "url": "http://nibl.co.uk/bots.php",                                      "text": "XDCC" },
-        { "url": "https://sceneaccess.eu",                                          "text": "SCC"  },
-        { "url": "http://bakabt.me/",                                               "text": "BBT"  },
-        { "url": "http://anidb.net/perl-bin/animedb.pl?show=mylist&do.filter=1",    "text": "ADB"  },
-        { "url": "http://www.mangaupdates.com/mylist.html",                         "text": "MU"   },
-        { "url": "http://vgmdb.net/",                                               "text": "VGM"  },
-        { "url": "https://github.com/",                                             "text": "GH"   },
-        { "url": "http://www.last.fm/home",                                         "text": "l.fm" },
-        { "url": "http://what.cd/index.php",                                        "text": "W.CD" },
+        { "url": "https://twitter.com/", 		                                    "image": "images/twitter_logo.png" },
+        { "url": "https://pirateproxy.sx",                                          "image": "images/tpb_logo.png"  },
+        { "url": "https://boards.4chan.org/b/",                           	        "image": "images/4chan_logo.png" },
+        { "url": "http://ecampus.ipl.be",                                           "image": "images/logo_ecampus.png"  },
     ],
     "search":
     {
@@ -29,10 +21,13 @@ d.addEventListener("DOMContentLoaded", function()
 
     for (var i = 0, MAX = config.sites.length; i < MAX; ++i)
     {
+		var image = new Image();
+		image.src = config.sites[i].image;
+		image.height = 100;
         var p = i / 12,
-            site = d.createElement("a");
+			site = d.createElement("a");
         site.href = config.sites[i].url;
-        site.textContent = config.sites[i].text;
+        site.appendChild(image);
 
         if (i % 12 === 0)
         {
