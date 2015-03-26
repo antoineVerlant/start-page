@@ -1,8 +1,8 @@
 import os, json
 #fill here
-WALLPAPERDIR = ""
+WALLPAPERDIR = "C:/wall/"
 #fill here and here
-JSONPATHOUTPUT = ".json"
+JSONPATHOUTPUT = "C:/start-page/BGList.json"
 
 l = []
 
