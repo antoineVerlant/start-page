@@ -2,7 +2,7 @@ import os, json
 #fill here
 WALLPAPERDIR = "C:/wall/"
 #fill here and here
-JSONPATHOUTPUT = "C:/start-page/BGList.json"
+JSONPATHOUTPUT = "C:/start-page/BGlist.json"
 
 l = []
 
