@@ -10,13 +10,13 @@ First fill the dictionary in js/main.js with the website you want on your homepa
 The pictures must be square. ( height and width must be equal).
 
 ### Update wallpaper list
-You can put all the wanted wallpaper in /pictures/wall/ folder and execute mkJson.py
+You can put all the wanted wallpaper in /pictures/wall/ folder and execute mkBgList.py
 Or
-You can edit mkJson.py and put the path (relative or absolute) to the directory (no backslash, and wiht slash).
+You can edit mkBgList.py and put the path (relative or absolute) to the directory (no backslash, and wiht slash).
 
 ## Special Tips
 You can use the 1,2,3, ... button to go the #1, #2, #3, ... websit of the list.
-Rename mkJson.py into mkJson.pyw and no terminal will be opened.
+Rename mkBgList.py into mkBgList.pyw and no terminal will be opened.
 
 ## Wallpaper source
 https://fauux.neocities.org/
