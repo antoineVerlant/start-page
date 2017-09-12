@@ -2,11 +2,18 @@ var config =
 {
     "sites":
     [
-        { "url": "https://twitter.com/", 		                                    "image": "images/twitter_logo.png" },
-        { "url": "https://pirateproxy.sx",                                          "image": "images/tpb_logo.png"  },
-        { "url": "https://boards.4chan.org/b/",                           	        "image": "images/4chan_logo.png" },
-        { "url": "http://ecampus.ipl.be",                                           "image": "images/logo_ecampus.png"  },
+        { "url": "https://facebook.com", 																				"image": "pictures/facebook_logo.png"  },
+        { "url": "https://twitter.com/", 		                                    "image": "pictures/twitter_logo.png" },
+        { "url": "https://pirateproxy.sx",                                      "image": "pictures/tpb_logo.png"  },
+        { "url": "https://boards.4chan.org/b/",                           	    "image": "pictures/4chan_logo.png" },
+        
     ],
+    /*"search":
+    {
+        "url"  : "https://duckduckgo.com",
+        "name" : "DuckDuckGo",
+        "query": "q"
+    }*/
 }, d = document;
 d.addEventListener("DOMContentLoaded", function()
 {
@@ -28,15 +35,22 @@ d.addEventListener("DOMContentLoaded", function()
             page.id = "page" + p;
 
             d.querySelector("#sites").appendChild(page);
-
+            
             if (p === 0)
             {
-                d.querySelector("#sites > div").classList.add("selected");
+							d.querySelector("#sites > div").classList.add("selected");
             }
         }
 
         d.querySelector("#page" + Math.floor(p)).appendChild(site);
     }
+	/*
+    var form = d.querySelector("#search form"),
+        text = form.querySelector("input");
+    form.action      = config.search.url;
+    text.name        = config.search.query;
+    text.placeholder = config.search.name;
+    text.focus();*/
 });
 	var isCtrl = false;
 	document.onkeyup=function(e) {
@@ -47,3 +61,4 @@ d.addEventListener("DOMContentLoaded", function()
 			}
 		}
 	}
+	

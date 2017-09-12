@@ -5,22 +5,22 @@
 	<title>New Tab</title>
 	<meta name="viewport" content="width=device-width">
 	<link rel="stylesheet" href="css/style.css">
-    <script src="js/jquery.min.js" type="text/javascript"></script>
-    <script src="js/main_mdr.js" type="text/javascript"></script>
+	<script src="js/main.js" type="text/javascript"></script>
 	<script src="js/json.js" type="text/javascript"></script>
 </head>
 <body id="mdr">
 
 	<script type="text/javascript">
-			loadJsonFile("BGlist.json",function(BgListe){
+	loadJsonFile("BGlist.json",function(BgListe){
 			var x = Math.floor(Math.random() * BgListe.length);
-			source = "file:///" + BgListe[x];
+			source =  "file:///"+BgListe[x];
+			source = source.replace(/\\/g,'/')
 			var bod = document.getElementById('mdr');
 			bod.style.backgroundRepeat = "no-repeat";
 			bod.style.backgroundSize="contain";
 			bod.style.backgroundPosition="center center"; 
 			bod.style.backgroundImage="url('"+source+"')";
-		});
+		})
 	</script>
     <div id="parent">
         <div id="panel">
@@ -29,6 +29,11 @@
             </div>
             <div id="wrapper">
                 <div id="sites"></div>
+                <!--<div id="search">
+                    <form method="get">
+                        <input type="text" autocomplete="on" />
+                    </form>
+                </div>-->
             </div>
         </div>
     </div>
