@@ -16,6 +16,7 @@ You can edit mkBgList.py and put the path (relative or absolute) to the director
 
 ## Special Tips
 You can use the 1,2,3, ... button to go the #1, #2, #3, ... websit of the list.
+
 Rename mkBgList.py into mkBgList.pyw and no terminal will be opened.
 
 ## Wallpaper source
